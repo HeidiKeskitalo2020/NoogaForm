@@ -32,10 +32,6 @@ namespace Palkka
             {
                 //MessageBox.Show(ofd.SafeFileName);
                 textBox1.Text = ofd.SafeFileName;
-                
-                //
-                
-                
             }
         }
 
@@ -57,16 +53,12 @@ namespace Palkka
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            StreamWriter writer = new StreamWriter(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Työtunnit.txt");
             {
-                using (Stream s = File.Open(saveFileDialog1.FileName, FileMode.CreateNew))
-                using (StreamWriter sw = new StreamWriter(s))
-                {
-                    sw.Write(textBox1.Text);
-                }
+                string data = System.IO.File.ReadAllText(ofd.FileName);
+                writer.WriteLine(data);
             }
-           
+            writer.Close();           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
