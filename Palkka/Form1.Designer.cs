@@ -93,8 +93,8 @@ namespace Palkka
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(563, 58);
             this.label2.TabIndex = 3;
-            this.label2.Text = "This is a simple program to run salary numbers \r\nfrom txt file to correct order\r\n" +
-    "";
+            this.label2.Text = "This is a simple program to run salary numbers \r\nfrom .txt file to correct order\r" +
+    "\n";
             // 
             // groupBox1
             // 
@@ -119,7 +119,7 @@ namespace Palkka
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(17, 27);
+            this.buttonRun.Location = new System.Drawing.Point(17, 35);
             this.buttonRun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRun.Name = "buttonRun";
             this.buttonRun.Size = new System.Drawing.Size(343, 38);
