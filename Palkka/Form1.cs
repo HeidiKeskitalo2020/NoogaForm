@@ -59,8 +59,8 @@ namespace Palkka
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Työtunnit.txt");
-            StreamWriter writer = new StreamWriter(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt");
+            StreamReader sr = new StreamReader(@"C:\Salary\WorkingHours.txt");
+            StreamWriter writer = new StreamWriter(@"C:\Salary\Salary.txt");
             string data = sr.ReadLine();
             while (data != null)
             {
@@ -73,11 +73,11 @@ namespace Palkka
             }
             writer.Close();
             Console.WriteLine("");
-            Console.WriteLine("Commas replaced to file (¨Salary.txt)");
+            Console.WriteLine("Commas replaced to file (Salary.txt)");
             Console.WriteLine("");
 
 
-            string filePath = @"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt";
+            string filePath = @"C:\Salary\Salary.txt";
 
             List<Payroll> pay = new List<Payroll>();
             List<string> lines = File.ReadAllLines(filePath).ToList();
@@ -139,7 +139,7 @@ namespace Palkka
                 //outContent.Add($"{payroll.PersonId} \t {payroll.Date} \t M \t {payroll.PValue}");
 
             }
-            string folder = @"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt";
+            string folder = @"C:\Salary\Salary.txt";
             File.WriteAllLines(folder, outContent);
 
             //Console.WriteLine("");
@@ -150,7 +150,7 @@ namespace Palkka
             Console.ReadLine();
             
             //textBox2.Text = outContent;
-            LabelMessage.Text = "Data written\nto file (Salary.txt)";
+            LabelMessage.Text = "Data written to file\n(C: Salary: Salary.txt)";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -160,13 +160,13 @@ namespace Palkka
 
         private void button3_Click(object sender, EventArgs e)
         {
-            StreamWriter writer = new StreamWriter(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Työtunnit.txt");
+            StreamWriter writer = new StreamWriter(@"C:\Salary\WorkingHours.txt");
             {
                 string data = System.IO.File.ReadAllText(ofd.FileName);
                 writer.WriteLine(data);
             }
             writer.Close();
-            label3.Text = "Data saved";
+            label3.Text = "Data saved to\nC: Salary: WorkingHours.txt";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
