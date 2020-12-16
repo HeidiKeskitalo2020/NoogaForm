@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Palkka
 {
@@ -59,7 +60,7 @@ namespace Palkka
         private void button2_Click(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Työtunnit.txt");
-            StreamWriter writer = new StreamWriter(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Commas.txt");
+            StreamWriter writer = new StreamWriter(@"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt");
             string data = sr.ReadLine();
             while (data != null)
             {
@@ -72,11 +73,11 @@ namespace Palkka
             }
             writer.Close();
             Console.WriteLine("");
-            Console.WriteLine("Commas replaced to file (Commas.txt)");
+            Console.WriteLine("Commas replaced to file (¨Salary.txt)");
             Console.WriteLine("");
 
 
-            string filePath = @"C:\Nooga\src\bin\Debug\netcoreapp3.1\Commas.txt";
+            string filePath = @"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt";
 
             List<Payroll> pay = new List<Payroll>();
             List<string> lines = File.ReadAllLines(filePath).ToList();
@@ -141,8 +142,8 @@ namespace Palkka
             string folder = @"C:\Nooga\src\bin\Debug\netcoreapp3.1\Salary.txt";
             File.WriteAllLines(folder, outContent);
 
-            Console.WriteLine("");
-            Console.WriteLine("Commas replaced to file (Commas.txt)");
+            //Console.WriteLine("");
+            //Console.WriteLine("Commas replaced to file (Commas.txt)");
             Console.WriteLine("");
             Console.WriteLine("Data written to file (Salary.txt)");
 
@@ -181,6 +182,11 @@ namespace Palkka
         private void label3_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/HeidiKeskitalo2020/PalkkaForm/blob/master/Palkka/Ty%C3%B6tunnit.txt");
         }
     }
 }

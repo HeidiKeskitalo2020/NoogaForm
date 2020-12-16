@@ -44,6 +44,7 @@ namespace Palkka
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -52,15 +53,16 @@ namespace Palkka
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 35);
+            this.textBox1.Location = new System.Drawing.Point(136, 27);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 26);
+            this.textBox1.Size = new System.Drawing.Size(215, 26);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonOpen
             // 
+            this.buttonOpen.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOpen.Location = new System.Drawing.Point(17, 27);
             this.buttonOpen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonOpen.Name = "buttonOpen";
@@ -78,18 +80,18 @@ namespace Palkka
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(642, 66);
+            this.label1.Location = new System.Drawing.Point(31, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 72);
+            this.label1.Size = new System.Drawing.Size(423, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "1. Open file  \r\n2. Save file\r\n3. Run Program\r\n";
+            this.label1.Text = "1. Open file             2. Save file             3. Run Program\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 62);
+            this.label2.Location = new System.Drawing.Point(30, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(563, 58);
             this.label2.TabIndex = 3;
@@ -98,6 +100,7 @@ namespace Palkka
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.buttonOpen);
             this.groupBox1.Location = new System.Drawing.Point(35, 186);
@@ -109,6 +112,7 @@ namespace Palkka
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(17, 25);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 40);
@@ -119,10 +123,11 @@ namespace Palkka
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(17, 35);
+            this.buttonRun.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRun.Location = new System.Drawing.Point(16, 27);
             this.buttonRun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(343, 38);
+            this.buttonRun.Size = new System.Drawing.Size(343, 42);
             this.buttonRun.TabIndex = 2;
             this.buttonRun.Text = "Run Program\r\n\r\n";
             this.buttonRun.UseVisualStyleBackColor = true;
@@ -142,10 +147,10 @@ namespace Palkka
             // LabelMessage
             // 
             this.LabelMessage.AutoSize = true;
-            this.LabelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMessage.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelMessage.Location = new System.Drawing.Point(38, 110);
             this.LabelMessage.Name = "LabelMessage";
-            this.LabelMessage.Size = new System.Drawing.Size(297, 52);
+            this.LabelMessage.Size = new System.Drawing.Size(284, 52);
             this.LabelMessage.TabIndex = 1;
             this.LabelMessage.Text = "The file will be saved after \r\nRuning the Program\r\n";
             this.LabelMessage.Click += new System.EventHandler(this.label3_Click);
@@ -175,6 +180,18 @@ namespace Palkka
             this.label3.TabIndex = 4;
             this.label3.Text = "Save the file";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(236, 58);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(115, 20);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Example file style\r\n";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
@@ -217,6 +234,7 @@ namespace Palkka
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
