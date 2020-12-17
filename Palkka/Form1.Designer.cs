@@ -89,11 +89,11 @@ namespace Palkka
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(445, 317);
+            this.label1.Location = new System.Drawing.Point(455, 251);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 23);
+            this.label1.Size = new System.Drawing.Size(385, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "1. Open file      2. Save file      3. Run Program\r\n";
+            this.label1.Text = "1. Open file   2. Save file   3. Run Program\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -101,12 +101,11 @@ namespace Palkka
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(229, 181);
+            this.label2.Location = new System.Drawing.Point(38, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(423, 54);
+            this.label2.Size = new System.Drawing.Size(820, 27);
             this.label2.TabIndex = 3;
-            this.label2.Text = "This is a simple program to run salary \r\nnumbers from .txt file to correct order\r" +
-    "\n";
+            this.label2.Text = "This is a simple program to run salary numbers from .txt file to correct order\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
@@ -114,7 +113,7 @@ namespace Palkka
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.buttonOpen);
-            this.groupBox1.Location = new System.Drawing.Point(56, 353);
+            this.groupBox1.Location = new System.Drawing.Point(43, 287);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(396, 89);
             this.groupBox1.TabIndex = 4;
@@ -165,7 +164,7 @@ namespace Palkka
             this.groupBox3.Controls.Add(this.linkLabel2);
             this.groupBox3.Controls.Add(this.LabelMessage);
             this.groupBox3.Controls.Add(this.buttonRun);
-            this.groupBox3.Location = new System.Drawing.Point(460, 353);
+            this.groupBox3.Location = new System.Drawing.Point(470, 287);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(388, 197);
             this.groupBox3.TabIndex = 6;
@@ -204,7 +203,7 @@ namespace Palkka
             // 
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(56, 463);
+            this.groupBox2.Location = new System.Drawing.Point(43, 397);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(396, 87);
             this.groupBox2.TabIndex = 7;
@@ -228,7 +227,7 @@ namespace Palkka
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(39, 318);
+            this.label4.Location = new System.Drawing.Point(39, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(360, 23);
             this.label4.TabIndex = 8;
@@ -236,7 +235,9 @@ namespace Palkka
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.groupBox1);
             this.groupBox4.Controls.Add(this.groupBox3);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.pictureBox1);
@@ -246,6 +247,7 @@ namespace Palkka
             this.groupBox4.Size = new System.Drawing.Size(900, 576);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // pictureBox1
             // 
@@ -263,8 +265,6 @@ namespace Palkka
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 588);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Name = "Form1";
             this.Text = "Salary numbers";
