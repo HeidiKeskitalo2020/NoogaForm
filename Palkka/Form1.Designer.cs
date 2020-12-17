@@ -150,10 +150,10 @@ namespace Palkka
             this.buttonRun.BackColor = System.Drawing.Color.Orange;
             this.buttonRun.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRun.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonRun.Location = new System.Drawing.Point(27, 27);
+            this.buttonRun.Location = new System.Drawing.Point(23, 27);
             this.buttonRun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(343, 42);
+            this.buttonRun.Size = new System.Drawing.Size(347, 42);
             this.buttonRun.TabIndex = 2;
             this.buttonRun.Text = "Run Program\r\n\r\n";
             this.buttonRun.UseVisualStyleBackColor = false;
