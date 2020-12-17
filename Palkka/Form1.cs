@@ -195,5 +195,10 @@ namespace Palkka
         {
             Process.Start("https://github.com/HeidiKeskitalo2020/PalkkaForm/blob/master/Palkka/Salary.txt");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
