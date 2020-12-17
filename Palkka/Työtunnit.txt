@@ -1,5 +1,5 @@
-Tässä on alla .txt -tiedoston esimerkki. 
-Päivä, Työntekijän numero ja 11 kpl eri palkkalajeja tabulaattorilla eroteltuna.
+Here is an example for .txt file style.
+Day, employee number and 11 salary species separated by a tab.
 ___________________________________________________________________________________________________________
 24/08/2020	11	9.43333	0	0	0	0	0	0	0	7.78333	2.15	0	
 25/08/2020	11	9.91667	0	0	0	0	0	0	0	7.8	2.61667	0	
