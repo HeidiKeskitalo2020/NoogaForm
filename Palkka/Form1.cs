@@ -188,7 +188,12 @@ namespace Palkka
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/HeidiKeskitalo2020/PalkkaForm/blob/master/Palkka/Ty%C3%B6tunnit.txt");
+            Process.Start("https://github.com/HeidiKeskitalo2020/PalkkaForm/blob/master/Palkka/WorkingHours.txt");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/HeidiKeskitalo2020/PalkkaForm/blob/master/Palkka/Salary.txt");
         }
     }
 }
