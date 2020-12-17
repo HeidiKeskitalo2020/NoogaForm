@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
@@ -69,23 +64,36 @@ namespace Palkka
                 data = sr.ReadLine();
 
                 writer.WriteLine(repData);
-
             }
             writer.Close();
-            Console.WriteLine("");
-            Console.WriteLine("Commas replaced to file (Salary.txt)");
-            Console.WriteLine("");
-
+            //Console.WriteLine("");
+            //Console.WriteLine("Commas replaced to file (Salary.txt)");
+            //Console.WriteLine("");
 
             string filePath = @"C:\Salary\Salary.txt";
 
             List<Payroll> pay = new List<Payroll>();
             List<string> lines = File.ReadAllLines(filePath).ToList();
 
+            var line_number = 0;
+
             foreach (var line in lines)
             {
+                line_number++;
                 //string tab = "\t";
-                string[] entries = line.Split('\t');
+                string[] entries = line.Trim().Split('\t');
+
+                if (entries.Length == 1 && entries[0] == "")
+                { 
+                    continue; 
+                }
+
+                if (entries.Length != 13)
+                {
+                    MessageBox.Show($"Input data error on line {line_number}.\nCheck if there is missing pay value or too many pay values." , "Warning!",  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;                    
+                }
+               
                 Payroll newPayroll = new Payroll();
 
                 newPayroll.Date = entries[0];
@@ -102,16 +110,11 @@ namespace Palkka
                 newPayroll.EveningHours = entries[11];
                 newPayroll.PValue = entries[12];
 
-                if (entries.Length == 14)
-                {
-                    pay.Add(newPayroll);
-                }
-                else
-                {
-                    Console.WriteLine("Missing PayValue, or too much");
-                }
+                pay.Add(newPayroll);
             }
+
             List<string> outContent = new List<string>();
+
             foreach (var payroll in pay)
             {
                 Console.WriteLine($"{payroll.PersonId} \t {payroll.Date} \t 1 \t {payroll.RegisteredHours}");
@@ -149,7 +152,6 @@ namespace Palkka
 
             Console.ReadLine();
             
-            //textBox2.Text = outContent;
             LabelMessage.Text = "Data written to file\n(C: Salary: Salary.txt)";
         }
 
