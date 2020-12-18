@@ -56,6 +56,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Nooga.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Nooga.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -119,6 +122,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Nooga_Ilman_taustaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="nicon.ico" />
+    <Content Include="Nooga.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
